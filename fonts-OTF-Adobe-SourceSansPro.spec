@@ -5,8 +5,8 @@ Version:	1.033
 Release:	1
 License:	OFL
 Group:		Fonts
-Source0:	http://downloads.sourceforge.net/project/sourcesans.adobe/SourceSansPro_FontsOnly-%{version}.zip
-# Source0-md5:	64e173b3b6fac1ff9105c361308baee4
+Source0:	http://downloads.sourceforge.net/sourcesans.adobe/SourceSansPro_FontsOnly-%{version}.zip
+# Source0-md5:	3c9453d754d044175c1082bdf2ab032a
 Source1:	%{name}-fontconfig.conf
 URL:		http://sourceforge.net/projects/sourcesans.adobe/
 BuildRequires:	unzip
@@ -44,3 +44,5 @@ fontpostinst OTF
 %files
 %defattr(644,root,root,755)
 %{otffontsdir}/*.otf
+%{_sysconfdir}/fonts/conf.d/%{name}.conf
+%{_datadir}/fontconfig/conf.avail/%{name}.conf
