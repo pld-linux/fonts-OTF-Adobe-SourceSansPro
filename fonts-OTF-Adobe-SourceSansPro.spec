@@ -1,12 +1,12 @@
 Summary:	Adobe Source Sans Pro - A set of OpenType fonts designed for user interfaces
 Summary(pl.UTF-8):	Adobe Source Sans Pro - zbiór fontów OpenType zaprojektowanych do interfejsów użytkownika
 Name:		fonts-OTF-Adobe-SourceSansPro
-Version:	1.038
+Version:	1.050
 Release:	1
 License:	OFL v1.1
 Group:		Fonts
 Source0:	http://downloads.sourceforge.net/sourcesans.adobe/SourceSansPro_FontsOnly-%{version}.zip
-# Source0-md5:	9593b87c5fc8ec83118f87692b224fc2
+# Source0-md5:	fb09802ab1ce200da18dc6f7ed5671b0
 Source1:	%{name}-fontconfig.conf
 URL:		http://sourceforge.net/projects/sourcesans.adobe/
 BuildRequires:	unzip
