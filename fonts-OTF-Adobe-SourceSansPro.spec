@@ -1,15 +1,16 @@
 Summary:	Adobe Source Sans Pro - A set of OpenType fonts designed for user interfaces
 Summary(pl.UTF-8):	Adobe Source Sans Pro - zbiór fontów OpenType zaprojektowanych do interfejsów użytkownika
 Name:		fonts-OTF-Adobe-SourceSansPro
-Version:	1.050
+%define	ro_ver	2.010
+%define	it_ver	1.065
+Version:	%{ro_ver}_%{it_ver}
 Release:	1
 License:	OFL v1.1
 Group:		Fonts
-Source0:	http://downloads.sourceforge.net/sourcesans.adobe/SourceSansPro_FontsOnly-%{version}.zip
-# Source0-md5:	fb09802ab1ce200da18dc6f7ed5671b0
+Source0:	https://github.com/adobe-fonts/source-sans-pro/archive/%{ro_ver}R-ro/%{it_ver}R-it/source-sans-pro-%{ro_ver}R-ro-%{it_ver}R-it.tar.gz
+# Source0-md5:	5dfa6f327cdd4cb363f8887493696a4c
 Source1:	%{name}-fontconfig.conf
-URL:		http://sourceforge.net/projects/sourcesans.adobe/
-BuildRequires:	unzip
+URL:		http://adobe-fonts.github.io/source-sans-pro
 Requires(post,postun):	fontpostinst
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,13 +22,19 @@ Source Sans is a set of OpenType fonts that have been designed to work
 well in user interface (UI) environments, as well as in text setting
 for screen and print.
 
+This package contains Roman fonts version %{ro_ver} and Italic fonts
+version %{it_ver}.
+
 %description -l pl.UTF-8
 Source Sans to zbiór fontów OpenType, zaprojetowanych z myślą o
 środowiskach interfejsów użytkownika (UI), a także składzie tekstu na
 ekran i do druku.
 
+Ten pakiet zawiera fonty podstawowe (Roman) w wersji %{ro_ver} oraz
+fonty kursywy (Italic) w wersji %{it_ver}.
+
 %prep
-%setup -q -n SourceSansPro_FontsOnly-%{version}
+%setup -q -n source-sans-pro-%{ro_ver}R-ro-%{it_ver}R-it
 
 %install
 rm -rf $RPM_BUILD_ROOT
